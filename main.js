@@ -18,11 +18,12 @@ function getResult(p1, p2, p3, XX) {
     const x = XX?.trim().length > 0 ? XX : 'x'
 
     const b0 = fx0
-    const b1 = (fx1 - fx0)/x1-x0
+    const b1 = (fx1 - fx0)/(x1-x0)
     const b2= (((fx2-fx1)/(x2-x1)) - ((fx1 - fx0)/ (x1-x0)))
     console.log(x)
     const div = document.createElement('div')
-    const fSolution = `${b0} + ${b1}( ${x} - ${x0} ) + ${b2}( ${x} - ${x0} ) * (${x} - ${x1}) `
+    const fSolution = `${b0} + ${b1} * ( ${x} - ${x0} ) + ${b2} * ( ${x} - ${x0} ) * (${x} - ${x1}) `
+    console.log(fSolution)
     div.innerHTML = `
     <p class="mb-2">x0: ${x0}<span class=" ml-4">fx0: </span>${fx0}</p>
     <p class="mb-2">x1: ${x1}<span class=" ml-4">fx1: </span>${fx1}</p>
